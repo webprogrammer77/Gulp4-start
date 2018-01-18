@@ -15,7 +15,11 @@ section.welcome {
   color: #fff;
   align-self: flex-end;
   position: fixed;
-  bottom: 30px;
-  text-align: center;  
+  bottom: rem(30px);
+  text-align: center;
+  @include phones{
+    bottom: 7px;
+  }
+
 }
 

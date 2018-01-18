@@ -10,6 +10,8 @@
   bottom: -150px;
 
   perspective: 100px;
+  overflow: hidden;
+  
 }
 // .parallax-scroll__layer{
 //   transform: translateX(-10px) translateZ(0);
@@ -21,7 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  
+  overflow: hidden;
 }
 
 .parallax-scroll__image {
@@ -30,6 +32,12 @@
   display: block;
   left: 50%;
   transform: translateX(-50%);
+  min-width: rem(1200px);
+  width: 110%;
+  max-width: 100%;
+  min-height: 80%;
+  overflow: hidden;
+  
 }
 
 .parallax__content {

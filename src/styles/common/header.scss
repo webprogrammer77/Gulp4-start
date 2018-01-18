@@ -11,6 +11,10 @@
         min-height: rem(640px); // min-width : rem(1150px);
         position: relative;
         @include flex-center(column);
+       @include tablets {
+  background-position: 0 0;
+}
+
     }
 
     .hero__socials {
