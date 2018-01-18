@@ -1,0 +1,49 @@
+.container.slider-box
+        ul#slides
+            li.slide.showing
+                .slide__pic
+                    img.slide__img(src="./img/slider/burgers.jpg", alt="burgers")
+                .slide__desc
+                    .slide__title Сайт "Бургерная"
+                    .slide__text HTML, CSS, Javascript
+                    a.slide__button(href="http://burger.prokhorov-igor.ru/", target="_blank") 
+                        +svg('link__icon', 'link')
+                        span Посмотреть сайт
+            li.slide
+                .slide__pic
+                    img.slide__img(src="./img/slider/rose.png", alt="rose")
+                .slide__desc
+                    .slide__title Сайт кафе "Роза"
+                    .slide__text Wordpress
+                    a.slide__button(href="https://prokhorov-igor.ru/", target="_blank")
+                        +svg('link__icon', 'link')
+                        span Посмотреть сайт 
+            li.slide
+                .slide__pic
+                    img.slide__img(src="./img/slider/mook.png", alt="mook") 
+                .slide__desc
+                    .slide__title Сайт клуб "Mook"
+                    .slide__text Wordpress
+                    a.slide__button(href="http://mook.prokhorov-igor.ru/", target="_blank")
+                        +svg('link__icon', 'link')
+                        span Посмотреть сайт 
+            li.slide
+                .slide__pic    
+                    img.slide__img(src="./img/slider/queen.png", alt="queen") 
+                .slide__desc
+                    .slide__title Сайт салона красоты "Lady Queen"
+                    .slide__text Webflow
+                    a.slide__button(href="http://saloon-lady-queen.webflow.io/ ", target="_blank") 
+                        +svg('link__icon', 'link')
+                        span Посмотреть сайт         
+        
+            button.controls#prev
+                +svg('controls__img', 'arrow') 
+            button.controls#next 
+                +svg('controls__img', 'arrow') 
+            ul.pagination
+                li.pagination__item
+                li.pagination__item
+                li.pagination__item
+                li.pagination__item
+

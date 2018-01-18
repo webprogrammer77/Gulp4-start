@@ -1,0 +1,26 @@
+header.header-blog
+  section.hero-blog
+    include paralax-scrol
+    .hero__socials
+      +socials('header')  
+
+    .hamburger-link 
+      span
+   
+    .hero-blog__content   
+      include user
+      
+      //- .hero-blog__user
+      //-   .user
+      //-     .user__pic
+      //-       img.user__img(src="/img/header/foto.jpg", alt="title-hero")  
+      .hero-blog__title  
+        h1.section-title__blog Блог
+        .hero-blog__desc Статьи, которые я написал   
+        +svg('section-title__img_blog', 'blog_header')
+          
+    
+    
+    
+    
++nav('main', {'Мои работы': '/works.html', 'Блог': '/blog.html', 'Обо мне': '/about.html', 'Авторизация': '/index.html'}, 'Обо мне')

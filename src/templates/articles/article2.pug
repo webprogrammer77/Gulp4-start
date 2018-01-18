@@ -1,0 +1,119 @@
+h1.article__title
+  | Шпаргалка примеры Git
+.article__date 23.12.2017
+                        
+.article__content  
+  p Собираем коллекцию простых и сложных примеров работы
+  h3
+    | Начало работы
+  p
+    | Создание нового репозитория, первый коммит, привязка удалённого репозитория с gthub.com, отправка изменений в удалённый репозиторий.
+  .highlight.highlight-source-shell
+    pre.
+      git init       
+      touch readme.md       
+      git add readme.md       
+      git commit -m              
+      git remote add origin git@github.com:nicothin/test.git       
+      git push origin master       
+  h3
+    | Обычный рабочий процесс
+  p
+    | Создание нового репозитория на github.com, клонирование к себе, работа, периодическая «синхронизация с github.com».
+  .highlight.highlight-source-shell
+    pre.
+            
+      git clone АДРЕС_РЕПОЗИТОРИЯ ПАПКА_ПРОЕКТА       
+             ПАПКА_ПРОЕКТА       
+      git add              
+      git commit -m              
+      git push origin master       
+  p
+    | Не обязательно после каждого коммита отправлять изменения в удаленный репозиторий, можно сделать это один раз в конце работы.
+  h3
+    | Внесение изменений в коммит
+  .highlight.highlight-source-shell
+    pre.
+      subl inc/header.html       
+      git add inc/header.html       
+      git commit -m              
+      git add inc/header.html       
+      git commit --amend -m              
+  h3
+    | Работа с ветками
+  p
+    | Есть master (публичная версия сайта), хотим масштабно что-то поменять (переверстать «шапку»), но по ходу работ возникает необходимость подправить критичный баг (неправильно указан контакт в «подвале»).
+  .highlight.highlight-source-shell
+    pre.
+      git checkout -b new_page_header       
+      subl inc/header.html       
+      git commit -a -m              
+      git checkout master       
+      git checkout -b footer_hotfix       
+      subl inc/footer.html       
+      git commit -a -m              
+      git checkout master       
+      git merge footer_hotfix       
+      git branch -d footer_hotfix       
+      git checkout new_page_header       
+      subl inc/header.html       
+      git commit -a -m              
+      git checkout master       
+      git merge new_page_header       
+      git branch -d new_page_header       
+  h3
+    | Работа с ветками, конфликт слияния
+  p
+    | Есть master (публичная версия сайта), в двух параллельных ветках (branch_1 и branch_2) было отредактировано одно и то же место одного и того же файла, первую ветку (branch_1) влили в master, попытка влить вторую вызывает конфликт.
+  .highlight.highlight-source-shell
+    pre.
+      git checkout master       
+      git checkout -b branch_1       
+      subl              
+      git commit -a -m              
+      git checkout master       
+      git checkout -b branch_2       
+      subl              
+      git commit -a -m              
+      git checkout master       
+      git merge branch_1       
+      git merge branch_2       
+      subl              
+      git commit -a -m              
+  h3
+    | Синхронизация репозитория-форка с мастер-репозиторием
+  p
+    | Есть некий репозиторий на github.com, он него нами был сделан форк, добавлены какие-то изменения. Оригинальный (мастер-) репозиторий был как-то обновлён. Задача: стянуть с мастер-репозитория изменения (которые там внесены уже после того, как мы его форкнули).
+  .highlight.highlight-source-shell
+    pre.
+      git remote add upstream git@github.com:address.git       
+      git fetch upstream       
+      git checkout master       
+      git merge upstream/master       
+  h3
+    | Ошибка в работе: закоммитили в мастер, но поняли, что нужно было коммитить в новую ветку (ВАЖНО: это сработает только если коммит еще не отправлен в удалённый репозиторий)
+  .highlight.highlight-source-shell
+    pre.
+            
+      git checkout -b new-branch       
+      git checkout master       
+      git reset HEAD~ --hard       
+      git checkout new-branch       
+  h3
+    | Нужно вернуть содержимое файла к состоянию, бывшему в каком-либо коммите (известна SHA коммита)
+  .highlight.highlight-source-shell
+    pre.
+      git checkout f26ed88 -- index.html       
+      git status       
+      git diff --staged       
+      git commit -am              
+  h3
+    | При любом действии с github (или другим удалённым сервисом) запрашивается логин/пароль
+  p Речь именно о запросе пароля, а не ключевой фразы.
+  .highlight.highlight-source-shell
+    pre.
+      git remote -v       
+      git remote add origin git@github.com:address.git       
+      git remote rm origin       
+      git remote add origin git@github.com:address.git       
+| 

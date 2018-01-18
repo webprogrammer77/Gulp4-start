@@ -1,0 +1,47 @@
+extends ../template
+
+block variables
+    - var title = 'Обо мне'
+    - var drop = '#about'
+    
+block content
+  include ../common/header
+  
+  section.section.about#about
+    include ../common/preloader
+    
+    include ../common/drop-down    
+    +triangle('about')         
+    .about__desc
+      .section-title.section-title__about
+            +svg('section-title__img', 'about-title')
+            h1.block-title Обо мне 
+      .about__desc-content
+        .user-description
+          .user-description__image
+            img.user-description__avatar(src="./img/header/foto.jpg")
+          .user-description__title
+            .block-subtitle Кто я
+          .user-description__text.text-content
+            p Я веб разработчик из Москвы и занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+    .about__scills
+      .triangle.tringle_fill_beige.about__right-triangle
+      .about__scills-title
+        .block-subtitle 
+                        |Чем я могу быть
+                        br 
+                        |вам полезен
+      .about__scills-text.text-content
+        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__scills-content
+        include ../common/skills.pug            
+  section.map
+    include ../common/googlemap
+    .map__contacts
+      include ../common/contacts
+      
+  
+  include ../common/footer
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAd3aQOZ97h4kFUYqiND-ckRxf8J7CNlvw&callback=initMap', async='', defer='')
+  

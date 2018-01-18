@@ -1,0 +1,23 @@
+extends ../template
+
+block variables
+    - var title = 'Добро пожаловать'
+    - var paralaxImg = ['./img/paralax/sky-px.png', './img/paralax/maunt6-px.png', './img/paralax/maunt5-px.png', './img/paralax/cloud2-px.png', './img/paralax/mount4-px.png', './img/paralax/mount3-px.png', './img/paralax/cloud2-px.png', './img/paralax/mount2-px.png', './img/paralax/mount1-px.png', './img/paralax/cloud-px.png'];
+
+
+block content
+    section.welcome
+        h1.visually-hidden Главная
+        //- include ../common/preloader
+        include ../common/paralax
+        button.btn-auth#flipper-rotate Авторизоваться
+
+        .flipper#flipper
+            .flipper__front
+                include ../common/welcome-enter
+            .flipper__back
+                include ../common/welcome-auth    
+                                
+        footer.welcome-footer
+            p &copy Прохоров Игорь | Создано с любовью LoftSchool | 2017    
+    

@@ -1,0 +1,81 @@
+
+// стили проекта
+
+html {
+  // font-size: 2.37vmin;
+  @include tablets {
+    font-size: rem(14px);
+  }
+
+  @include phones {
+    font-size: rem(12px);
+  }
+}
+
+body {
+  font-size              : rem(16px);
+  line-height            : 1.42;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position               : relative;
+  @include roboto();
+  color: $black-l;
+  // display:none;
+}
+a {  
+  text-decoration: underline;
+  color: $color-link; 
+}
+img,
+svg {
+  max-width: 100%;
+}
+.container {
+  position: relative;
+  display       : flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  position: relative;
+  width   : 100%;
+  min-height: 100%;
+  height: auto;
+  overflow  : hidden;
+  padding-bottom: rem(-150px);
+}
+.section{
+  position: relative;
+  width: 100%;
+  min-height: rem(650px);
+  @include tablets{
+    height: auto;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+// .overlay{
+//    width:100%;
+//     min-height:100%;
+//     background-color: rgba(0,0,0,0.5);
+//     overflow:hidden;
+//     position:fixed;
+//     top:0;
+//     left:0;
+//     z-index:1200;
+// }
+
+
+

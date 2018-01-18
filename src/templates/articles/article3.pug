@@ -1,0 +1,84 @@
+h1.article__title
+  | Шпаргалка GULP.
+.article__date 23.12.2017
+                        
+.article__content  
+  .highlight.highlight-source-shell
+    pre.
+      npm [command] -h                 
+      npm i [package]                  
+      npm i [package] -D               
+      npm home [package]               
+      npm repo [package]               
+      npm r [package]                  
+      npm list --depth=0               
+      npm list -g --depth=0            
+      npm list [package]               
+      npm view [package] version       
+      npm outdated                     
+  h2
+    | NPM-скрипты
+  p
+    | В 
+    code package.json
+    | , в секцию 
+    code "scripts"
+    |  можно прописать команды, которые будут выполняться с помощью команды 
+    code npm run
+    | , но по умолчанию есть некоторые сокращения:
+  ul
+    li
+      code npm test
+      |  или 
+      code npm t
+      |  — сокращения для 
+      code npm run test
+    li
+      code npm start
+      |  — сокращение для 
+      code npm run start
+  p
+    | Команда 
+    code nmp run [что-то]
+    |  добавляет в 
+    code $PATH
+    |  директорию 
+    code node_modules/.bin
+    | , так что можно использовать не глобально установленные зависимости проекта без упоминания этой директории.
+  
+  h2
+    | Разное
+  
+  .highlight.highlight-source-shell
+    pre.
+      npm        init.author.name       
+      npm        init.author.email       
+      npm        init.author.url       
+  p
+    | Поместите в корень репозитория файл 
+    code .npmrc
+    |  из этого репозитория для уменьшения длинны сообщений об ошибках в консоли.
+  p
+    | Отключите прогресс-бар для увеличения скорости установки пакетов: 
+    code npm set progress=false
+  p
+    | Используйте сокращенную запись для установки пакетов с одинаковым префиксом: 
+    br
+    code npm i gulp-{concat,minify,uglify} -D
+  p
+    | Используете 
+    a(href='https://bower.io/', rel='nofollow') bower
+    | ? Хорошо. Но для тех, кто его не использует, будет невозможно собрать проект.       
+  h2
+    | Полезные ссылки
+  ul
+    li
+      a(href='http://prgssr.ru/development/vvedenie-v-paketnyj-menedzher-npm-dlya-nachinayushih.html#heading-node', rel='nofollow') Введение в пакетный менеджер NPM для начинающих
+    li
+      a(href='https://docs.npmjs.com/getting-started/fixing-npm-permissions', rel='nofollow')
+        | Как устанавливать пакеты без 
+        code sudo
+    li
+      a(href='http://frontender.info/task_automation_with_npm_run/', rel='nofollow') Автоматизация задач с помощью npm run
+    li
+      a(href='http://prgssr.ru/development/pochemu-npm-skripty.html#heading-browsersync', rel='nofollow') Почему npm-скрипты?

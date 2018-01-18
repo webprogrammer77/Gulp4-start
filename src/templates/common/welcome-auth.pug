@@ -1,0 +1,20 @@
+article.window.welcome__auth
+  .window__content
+    h2.block-subtitle Авторизуйтесь
+    form.window__form(id="form-auth" name="form-auth" action="")
+      label.window__label(for="user") 
+      input.window__input.window__input_login(id="login" name="user" type="text" placeholder="Логин")
+      label.window__label(for="password") 
+      input.window__input.window__input_pass(id="password" name="password" type="password" placeholder="Пароль")
+      input.window__input-checked(id="captch" name="password" type="checkbox")
+      label.window__label-checked(for="captch") Я человек
+      p.window__text Вы точно не робот?   
+      .window__input-row                    
+        input.window__input-radio(id="yes" name="yes" type="radio")
+        label.window__label-radio(for="yes") да
+                   
+        input.window__input-radio(id="no" name="yes" type="radio")
+        label.window__label-radio(for="no") Не уверен
+  .window__buttons
+    a.window__button(href="about.html") Обо мне
+    button.window__button(id="auth" type="submit") Войти

@@ -1,0 +1,47 @@
+//drop-down
+
+.drop-down,
+.drop-up {
+  display: block;
+  position: absolute;
+  left: 49%;
+  transform: translateX(-50%);
+  width: rem(40px);
+  height: rem(40px);
+  transition: 0.5s;
+  animation: arrowDown 0.7s infinite alternate;
+  filter: drop-shadow(0 3px 0px rgba(0, 0, 0, 0.3));
+  z-index: 20;
+  fill: #fff;
+
+  &:hover {
+    animation-play-state: paused;
+
+    svg {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.drop-down {
+  top: rem(-90px);
+}
+
+.drop-up {
+  bottom: rem(160px);
+  &:hover {
+    animation-play-state: paused;
+    .drop-up__img {      
+    transform:  scale(1.2) rotate(180deg);
+      
+    }
+  }
+  @include tablets{
+    bottom: rem(200px);
+  }
+}
+.drop-up__img {
+  transform: rotate(180deg);
+}
+
+//------------

@@ -1,0 +1,83 @@
+.welcome__auth .window__form {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .window__input_login,
+  .window__input_pass {
+    background: #fff url("../img/icons/password.svg") no-repeat 15px center;
+    background-size: 15px;
+    box-shadow: inset 45px 0 0 $title-border;
+    padding-left:  60px;
+    height: 50px;
+  }
+
+  .window__input_login {
+    background-image: url("../img/icons/login.svg");
+  }
+    .window__text {
+    @include roboto(bold);
+    // margin-bottom: 20px;
+  }
+}
+
+.window__input-checked,
+.window__input-radio {
+  @include hidden;
+}
+
+.window__input-checked {
+  & + .window__label-checked {
+    margin-bottom: 20px;
+  }
+
+  & + .window__label-checked:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    background: #fff;
+    border-radius: 4px;
+    border: 2px solid $title-border;
+  }
+
+  &:checked {
+    & + .window__label-checked:before {
+      width: 20px;
+      height: 20px;
+      background: rgba($green, 0.8) url("../img/icons/check.svg") no-repeat center;
+      background-size: 13px;
+      border-radius: 3px;
+      border: none;
+    }
+  }
+}
+
+.window__input-radio {
+  & + .window__label-radio:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  & + .window__label-radio:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    background: #fff;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 2px $title-border;
+  }
+
+  &:checked {
+    & + .window__label-radio:before {
+      background: $green-l;
+    }
+  }
+}

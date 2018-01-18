@@ -1,0 +1,114 @@
+#parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 100%;
+  overflow: hidden;
+  background: $parallax-bg;
+  background-position:  center;
+}
+
+.parallax__layer {
+  height: 115%;
+  width: 115%;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  will-change: transform;
+}
+
+.parallax__image {
+  position: absolute;
+  // top: 0;
+  width: 100%;
+  // height: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+// ====================================
+// .imgs {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100vh;
+//   width: 100vw;
+//   overflow: hidden;
+
+//   &__img {
+
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+// }
+
+/*
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__group { border: 1px solid;
+  transform: translate3d(700px, 0, -800px) rotateY(30deg);
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+.parallax__layer--deep {
+  transform: translateZ(-2px) scale(3);
+}
+
+
+img.paralax__img {
+  display: block;
+  min-height: 450px;
+  min-width: 1200px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+*/
+// .parallax {
+//     @include cover();
+//     background: 
+//     url('../img/paralax/sky-px.png'), 
+//     url('../img/paralax/maunt6-px.png'), 
+//     url('../img/paralax/maunt5-px.png'), 
+//     url('../img/paralax/cloud2-px.png'),
+//     url('../img/paralax/mount4-px.png'), 
+//     url('../img/paralax/mount3-px.png'), 
+//     url('../img/paralax/cloud2-px.png'), 
+//     url('../img/paralax/mount2-px.png'), 
+//     url('../img/paralax/mount1-px.png'),
+//     url('../img/paralax/cloud-px.png');
+// }
+
+// .parallax-scroll__layer{
+//   transform: translateX(-10px) translateZ(0);
+// }

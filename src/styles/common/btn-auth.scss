@@ -1,0 +1,26 @@
+.btn, .btn-auth {
+  width: rem(180px);
+  height: rem(50px);
+  line-height: rem(40px);
+  border-radius: 5px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  @include roboto(medium);
+
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #fff;
+    color: $green-l;
+  }
+
+  position: absolute;
+  right:rem( 25px);
+  top: rem( 25px);
+  @include tablets{
+    right: 50% ;
+    transform: translate(50%);
+  }
+}

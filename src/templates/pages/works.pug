@@ -1,0 +1,27 @@
+extends ../template
+
+block variables
+    - var title = 'Мои работы'
+    - var drop = '#slider'         
+   
+block content
+    include ../common/preloader
+    include ../common/header    
+    section.section.slider#slider
+        include ../common/drop-down
+        +triangle('works')
+        .section-title.section-title__works
+            +svg('section-title__img', 'works-title')
+            h1.block-title Мои работы
+        include ../common/slider
+    section.section.reviews
+        .section-title.section-title__reviews            
+            +svg('section-title__img', 'about-title')
+            h1.block-title  Что обо мне 
+                            br
+                            |говорят    
+        include ../common/reviews
+        include ../common/window-feedback
+        include ../common/drop-up        
+    include ../common/footer
+        

@@ -1,0 +1,105 @@
+.section-title {
+  position: relative;
+  overflow: hidden;
+
+  // height: rem(130px);
+  width: auto;
+  height: auto;
+
+  // @include flex-center(row);
+  &__about {
+    height: rem(130px);
+  }
+
+  &__works {
+    background-color: $works-bg;
+    height: rem(200px);
+    width: 100%;
+  }
+
+  &__reviews {
+    background: transparent;
+    height: rem(200px);
+    width: 100%;
+  }
+
+  
+}
+
+.section-title__img {
+  height: 100%;
+  width: 100%;
+  fill: $title-img;
+  transform: scale(4);
+
+  // viewBox: 0 50 50 50;
+}
+
+.block-title {
+  @include absolute-center;
+
+  // @include flex-center(row);
+  display: flex;
+  justify-content: space-around;
+
+  @include bernier-reg;
+
+  height: auto;
+  min-width: 200px;
+  color: $black;
+  font-size: rem(63px);
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:before, &:after {
+    @include title-border;
+
+    position: absolute;
+    top: 25px;
+  }
+
+  &:before {
+    left: -30px;
+  }
+
+  &:after {
+    right: -30px;
+  }
+
+  
+}
+
+// ===блок subtitle
+.block-subtitle {
+  @include flex-center(row);
+
+  position: relative;
+  width: auto;
+
+  @include bernier-reg;
+
+  color: $black;
+  font-size: rem(35px);
+
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  &:before, &:after {
+    @include title-border;
+
+    position: absolute;
+    top: rem(17px);
+  }
+
+  &:before {
+    left: rem(-30px);
+  }
+
+  &:after {
+    right: rem(-30px);
+  }
+  @include tablets{
+    // font-size: rem(30px);
+  }
+}

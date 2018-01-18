@@ -1,0 +1,100 @@
+mixin triangle(pages)
+    .triangle(class=`triangle-${pages}`)      
+        svg(class='triangle__img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none')
+            polygon.triangle__left(points="0 0, 0 100, 50 100")
+            polygon.triangle__right(points="100 0, 100 100, 50 100")
+
+
+mixin svg(classIco, name)
+    svg(class=classIco viewbox="0 0 100 100")        
+        use(xlink:href='/img/sprite-svg/sprite.symbol.svg#' +name)
+
+mixin socials(classSoc)
+    -
+        var person = [
+            {
+            path: 'https://vk.com/prohorovim',
+            nam: 'vk'
+            },{            
+            path: 'https://github.com/webprogrammer77',
+            nam: 'github'
+            },{                
+            path: 'https://www.instagram.com/prokhorov6381/',
+            nam: 'in'             
+            }            
+        ]
+    ul(class=`socials socials-${classSoc}`)
+        each item in person
+            li(class=`socials__item socials__item_${classSoc}`)
+                a(class=`socials__link socials__link-${classSoc}` href=`${item.path}` target='_blank')
+                    svg(class=`socials__img socials__img_${classSoc}` viewbox="0 0 100 100")
+                        use(xlink:href=`./img/sprite-svg/sprite.symbol.svg#${item.nam}`)  
+                        //-
+                            +svg(`socials__img socials__img-${classSoc}`, `${classSoc}`, '0 0 100 100')
+mixin skills(classSk)
+    -
+        var skills = [
+            {
+            titl: 'Frontend',
+            skill: ['HTML5', 'CSS3', 'JavaScript и jQuery']
+            },{            
+            titl: 'Backend',
+            nam:  ['PHP', 'MySQL', 'Node.js', 'MongoDB']
+            },{                
+            path: 'Workflow',
+            nam: ['GIT', 'GULP', 'YARN', 'Webpack']      
+            }            
+        ]
+    h3.skills-title  #{contact[0]}
+        ul(class=`skill-${classSk}`)
+            each item in skills[0]
+                li(class=`slills__item skills__item_${classSk}`)
+                    h2 skills.titl                   
+                        each item in skills.skill
+                            li(class=`slill__item skill__item_${classSk}`)
+                                a(class=`skill__link skill__link_${classSk}` href=`${item.path}` target='_blank')
+                                    svg(class=`skill__img skill__img_${classSk}` viewbox="0 0 100 100")
+                                            use(xlink:href=`./img/sprite-svg/sprite.symbol.svg#${item.nam}`)      
+
+//-#{skill[titl]}
+//-#{skill[skill]}
+
+mixin ie9
+    //
+        if lt IE 10
+           
+            <div id="old-browser">
+                <div class="info">Вы используете устаревшую версию браузера. <br> Обновите
+                    Ваш браузер или установите нормальный и современный<br>
+                    <a href="https://www.google.com/chrome/browser/desktop/index.html">Google Chrome</a><br>
+                    <a href="https://www.mozilla.org/ru/firefox/new/">Mozilla Firefox</a><br>
+                    <a href="http://www.opera.com/ru/computer/windows">Opera</a><br>
+                    для лучшего отображения данного сайта.
+                </div>
+            </div>
+
+mixin nav (className, items, activeItem)
+    nav.nav(class=`${className}-nav` id=`nav-${className}`)
+        ul(class=`${className}-nav__list`)
+            each href, title in items
+                if (title == activeItem) 
+                    li(class=`${className}-nav__item`)
+                        a(class=`${className}-nav__link active` href=href)
+                            span= title
+                else
+                    li(class=`${className}-nav__item`)
+                        a(class=`${className}-nav__link` href=href)
+                            span(class=`${className}-nav__link-text`)= title
+                            
+mixin select (className, options, selectedOption)
+    select(class=`${className}`)
+        each option in options
+            if option === selectedOption
+                option(value=`${option}` selected)= option
+            else
+                option(value=`${option}`)= option	           
+
+mixin title (text, icon)
+    .block-title(style=`background-image: url('/assets/img/decor/${icon}.png')`) 
+        | #{text}                
+    

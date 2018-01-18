@@ -1,0 +1,52 @@
+//colors
+$black-l   : #455a64;
+$black     : #373e42;
+$red       : #e4484b;
+$green     : #009688;
+$green-l   : #00bfa5;
+$green-skills: #1bb696;
+$title-img: #e6e5df;
+
+$color-link: #6da3bd;
+$title-border: rgba($black, 0.10);
+$color-alert: #e44845;
+$color-review: #20b5a1;
+
+//bg
+$about-bg: #efeee9;
+$about-bg-right: #eeebdf;
+$works-bg: #f8f9f0;
+$slider-bg: #eeebe0;
+$slide-bg: #f0efe9;
+$parallax-bg: rgba(62, 62, 245, 0.01);
+//fonts
+$fa-font-path: '../fonts/';
+
+// resolutions
+$desktop-big : 1800px;
+$desktop     : 1200px;
+$laptop      : 992px;
+$desktop-mini: 910px;
+$tablets     : 768px;
+$phones      : 480px;
+
+
+//normalize
+@import "layout/normalize.scss";
+//reset
+@import "layout/reset.scss";
+// media
+@import "layout/media.scss";
+@import 'layout/animations.scss';
+
+// // setups
+@import "layout/mixins.scss";
+@import "layout/fonts.scss";
+@import "layout/layout.scss";
+@import "layout/animations.scss";
+// @import "layout/font-awesome.scss";
+
+@import 'common/*.scss';
+
+@import 'pages/*.scss';
+@import 'pages/index.scss';

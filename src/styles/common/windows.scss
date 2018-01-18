@@ -1,0 +1,98 @@
+.window {
+  width: rem(380px);
+  height: rem(450px);
+  border-radius: rem(5px);
+  overflow: hidden;
+}
+
+.window__content {
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(#fff, 0.85);
+  width: 100%;
+  height: 89%;
+  padding: 20px;
+  z-index: 10;
+  overflow: hidden;
+
+  .block-subtitle {
+    margin-bottom: rem(30px);
+  }
+
+  
+}
+.window__form {
+  width: 100%;
+  height: 100%;
+  // @include flex-center(column);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  input, textarea{
+    display: flex;
+    width: 100%;
+  }
+}
+
+.window__buttons {
+  width: 100%;
+  height: 11%;
+  background: rgba($green-l, 0.85);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window__button {
+  color: #fff;
+  flex: 1;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+
+  &:not(:last-child) {
+    border-right: 2px solid rgba(#fff, 0.2);
+  }
+
+  &:hover {
+    background: rgba($green, 0.85);
+  }
+}
+
+
+
+.window__input{
+  height: rem(45px);
+  width: 100%;
+  background: #fff;
+  margin-bottom: rem(20px);
+  border-radius: rem(5px);
+  padding: rem(15px);
+}
+
+.window__input_login,
+.window__input_pass {
+  background: #fff url("../img/icons/password.svg") no-repeat 15px center;
+  background-size: 15px;
+  box-shadow: inset 45px 0 0 $title-border;
+  padding-left: 60px;
+  height: 50px;
+}
+
+.window__textarea {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 100%;
+  height: rem(140px);
+  overflow: auto;
+  resize: none;
+  padding: rem(15px);
+}

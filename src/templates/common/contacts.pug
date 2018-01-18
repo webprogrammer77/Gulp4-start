@@ -1,0 +1,17 @@
+.contacts
+        .contacts__title
+          .block-subtitle Контакты
+        ul.contacts__list
+          - 
+           var contacts = [
+             ['skype', 'webprogrammer77'],
+             ['envelope', 'webprogrammer77@gmail.com'],
+             ['phone', '+7966 311 50 50'],
+             ['map-marker', 'Москва'],
+           ]
+          each contact in contacts
+            li.contacts__item
+              .contacts-row
+                //- .contacts-row__icon 
+                +svg('contacts-row__img', `${contact[0]}`)
+                .contacts-row__content #{contact[1]}

@@ -1,0 +1,43 @@
+@keyframes slideInUp {
+	from {
+		transform : translate3d(0, 100%, 0);
+		visibility: visible;
+		opacity   : 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity  : 1;
+	}
+}
+
+.slideInUp {
+	animation: slideInUp .3s;
+}
+@keyframes arrowDown {
+    0% {
+        transform: translateY(-10px);
+    }
+            
+    100% {
+        transform: translateY(0%);
+    }       
+}
+@keyframes extension {
+    0% {
+        width: 0;
+    }
+            
+    100% {
+        width: 100%;
+    }       
+}
+@keyframes narrowing {
+    0% {
+        width: 100%;
+    }
+            
+    100% {
+        width: 0;
+    }       
+}

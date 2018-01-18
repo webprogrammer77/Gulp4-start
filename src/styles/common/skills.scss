@@ -1,0 +1,154 @@
+.about__scills {
+  background-color: $about-bg-right;
+  justify-content: flex-start;
+  @include tablets{
+    justify-content: center;
+  }
+}
+
+.about__scills-title {
+  height: rem(180px);
+
+  @include flex-center(column);
+}
+
+.about__scills-text,
+.about__scills-content {
+  width: 80%;
+}
+
+.about__scills-text {
+  margin-bottom: rem(50px);
+}
+
+.circles {
+  fill: none;
+  stroke-width: 20;
+}
+
+.circle__first {
+  stroke: $title-border;
+}
+
+.circle__second {
+  stroke: $green-l;
+  stroke-dasharray: .0010 282.6;
+  transition: all 1s;
+}
+.skills-title{
+  @include roboto(medium);
+  font-size: rem(28px);
+  line-height: 1.3;
+  margin-bottom: rem(20px);
+}
+.skills-list{
+  display: flex;
+  flex-wrap: wrap;
+  @include tablets{
+    justify-content: center;
+  }
+}
+.skills-list__item {
+  position: relative;
+  display: inline-block;
+  flex:1;
+  max-width: 25%;
+  padding: 2%;
+}
+
+.skills-list__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  @include roboto(medium);
+  color: $green-l;
+  // line-height: 2;
+  font-size: rem(12.9px)
+  
+}
+
+.circles.active .circle-0 {
+  stroke-dasharray: .001 282.6;
+}
+
+.circles.active .circle-5 {
+  stroke-dasharray: 14.13 282.6;
+}
+
+.circles.active .circle-10 {
+  stroke-dasharray: 28.26 282.6;
+}
+
+.circles.active .circle-15 {
+  stroke-dasharray: 42.39 282.6;
+}
+
+.circles.active .circle-20 {
+  stroke-dasharray: 56.52 282.6;
+}
+
+.circles.active .circle-25 {
+  stroke-dasharray: 70.65 282.6;
+}
+
+.circles.active .circle-30 {
+  stroke-dasharray: 84.78 282.6;
+}
+
+.circles.active .circle-35 {
+  stroke-dasharray: 98.91 282.6;
+}
+
+.circles.active .circle-40 {
+  stroke-dasharray: 113.04 282.6;
+}
+
+.circles.active .circle-45 {
+  stroke-dasharray: 127.17 282.6;
+}
+
+.circles.active .circle-50 {
+  stroke-dasharray: 141.3 282.6;
+}
+
+.circles.active .circle-55 {
+  stroke-dasharray: 155.43 282.6;
+}
+
+.circles.active .circle-60 {
+  stroke-dasharray: 169.56 282.6;
+}
+
+.circles.active .circle-65 {
+  stroke-dasharray: 183.69 282.6;
+}
+
+.circles.active .circle-70 {
+  stroke-dasharray: 197.82 282.6;
+}
+
+.circles.active .circle-75 {
+  stroke-dasharray: 211.95 282.6;
+}
+
+.circles.active .circle-80 {
+  stroke-dasharray: 226.08 282.6;
+}
+
+.circles.active .circle-85 {
+  stroke-dasharray: 240.21 282.6;
+}
+
+.circles.active .circle-90 {
+  stroke-dasharray: 254.34 282.6;
+}
+
+.circles.active .circle-95 {
+  stroke-dasharray: 268.47 282.6;
+}
+
+.circles.active .circle-100 {
+  stroke-dasharray: 282.6 282.6;
+}

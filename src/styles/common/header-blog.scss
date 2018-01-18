@@ -1,0 +1,78 @@
+.header-blog{
+  position: relative;
+  overflow: hidden;
+  
+}
+.hero-blog {
+  
+  // @include bg-img("../img/pages/blog/blog-bg.jpg");
+  @include bg-img("../../img/paralax/paralax10.png");
+
+
+  width: 100%;
+  min-height: rem(400px);
+
+  @include flex-center(column);
+}
+
+.hero-blog__content {
+  @include flex-center(column);
+  height: rem(400px);
+}
+
+.hero-blog__user {
+  margin-bottom: rem(40px);
+}
+
+.hero-blog__title {
+  position: relative;
+  width: rem(500px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title__img_blog {
+  position: absolute;
+  top: rem(-200px);
+  left: 0;
+  fill: #fff;
+  width: rem(500px);
+  opacity: 0.2;
+  z-index: 10;
+}
+
+.hero-blog__desc {
+  color: #fff;
+}
+
+.section-title__blog {
+  @include bernier-reg;
+
+  font-size: rem(63px);
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  width: auto;
+  margin-bottom: 0;
+
+  &:before, &:after {
+    content:'';
+    width: rem(20px);
+    height: rem(4px);
+    opacity: 0.3;
+    background: #fff;
+    position: absolute;
+    top: rem(30px);
+  }
+
+  &:before {
+    left: rem(-30px);
+  }
+
+  &:after {
+    right: rem(-30px);
+  }
+}

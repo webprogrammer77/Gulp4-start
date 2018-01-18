@@ -1,0 +1,191 @@
+@mixin cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@mixin bg-img($bg-img-path) {
+  background: url($bg-img-path) top center no-repeat;
+  background-size: cover;
+}
+
+@mixin flex-center($style: column) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // flex: 1;	
+  @if $style == column {
+    flex-direction: column;
+  }
+
+  @if $style == row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  @if $style == column-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+@mixin absolute-center {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(#2f3234, 0.9);
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  display: none;
+  transition: opacity .3s;
+
+  // &_visible {
+  // 	display: flex;
+  // 	opacity: 1;
+  // }
+}
+
+@mixin hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin overlay {
+  width: 100%;
+  min-height: 100%;
+  background: rgba($green-l, 0.87);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+@mixin title-border {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 5px;
+  background: $title-border;
+}
+
+/*--media--*/
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}
+
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-mini {
+  @media screen and (max-width: $desktop-mini) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin before-tablets {
+  @media screen and (min-width: $tablets) {
+    @content;
+  }
+}
+@mixin big-screen {
+  @media screen and (min-width: $desktop-big) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+//   -----шрифты---//
+@mixin font-a {
+  font-family: 'font-awesome', Helvetica, sans-serif;
+}
+
+@mixin roboto($style: light) {
+  font-family: 'roboto', Helvetica, sans-serif;
+
+  @if $style == light {
+    font-weight: 300;
+  }
+
+  @if $style == norm {
+    font-weight: 400;
+  }
+
+  @if $style == medium {
+    font-weight: 500;
+  }
+
+  @if $style == bold {
+    font-weight: bold;
+  }
+}
+
+@mixin bernier-dis {
+  font-family: 'bernier-distressed';
+}
+
+@mixin bernier-reg {
+  font-family: 'bernier-regular';
+}
+
+@mixin bernier-sha {
+  font-family: 'bernier-shade';
+}
+
+@mixin placecolor($color: #000000) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000) {
+  background-color: $top-color;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */
+  background-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+  background-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* Firefox 3.6-15 */
+  background-image: -o-linear-gradient(top, $top-color, $bottom-color); /* Opera 11.10-12.00 */
+  background-image: linear-gradient(to bottom, $top-color, $bottom-color); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+  // filter          : progid: DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
+}

@@ -1,0 +1,21 @@
+section.welcome {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include bg-img("../img/paralax/paralax10.png");
+}
+
+.welcome-footer {
+  width: 100%;
+  color: #fff;
+  align-self: flex-end;
+  position: fixed;
+  bottom: 30px;
+  text-align: center;  
+}
+

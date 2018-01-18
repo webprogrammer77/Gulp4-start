@@ -1,0 +1,152 @@
+h1.article__title
+  | Шпаргалка по командам Git
+.article__date 27.02.2017
+                        
+.article__content
+  
+  h3
+    | Создать новый репозиторий
+  .highlight.highlight-source-shell
+    pre.
+      git init       
+      git init folder-name       
+  h3
+    | Клонирование репозитория
+  .highlight.highlight-source-shell
+    pre.
+      git clone git@github.com:nicothin/web-design.git       
+      git clone git@github.com:nicothin/web-design.git foldername       
+      git clone git@github.com:nicothin/web-design.git              
+  h3
+    | Добавление файлов к отслеживанию, индексация отслеживаемых
+  .highlight.highlight-source-shell
+    pre.
+      git add text.txt       
+      git add              
+      git add -i       
+      git add -p       
+  h3
+    | Убирание файла, папки из отслеживания
+  .highlight.highlight-source-shell
+    pre.
+      git rm --cached readme.txt       
+      git rm --cached -r folder       
+  h3
+    | Отмена индексации
+  .highlight.highlight-source-shell
+    pre.
+      git reset HEAD       
+      git reset HEAD text.txt       
+  h3
+    | Просмотр изменений
+  .highlight.highlight-source-shell
+    pre.
+      git diff       
+      git diff --staged       
+  h3
+    | Отмена изменений
+  .highlight.highlight-source-shell
+    pre.
+      git checkout -- text.txt       
+      git checkout --                  
+      git checkout text.txt       
+  h3
+    | Коммиты
+  .highlight.highlight-source-shell
+    pre.
+      git commit -m              
+      git commit -a -m              
+      git commit       
+      git commit --amend       
+      git commit --amend -m              
+  h3
+    | Отмена коммитов
+  .highlight.highlight-source-shell
+    pre.
+      git revert HEAD --no-edit       
+      git revert b9533bb --no-edit       
+      git reset --hard 75e2d51       
+  h3
+    | Временно переключиться на другой коммит
+  .highlight.highlight-source-shell
+    pre.
+      git checkout b9533bb       
+      git checkout master       
+  h3
+    | Переключиться на другой коммит и продолжить работу с него
+  p Потребуется создание новой ветки, начинающейся с указанного коммита.
+  .highlight.highlight-source-shell
+    pre.
+      git checkout -b new-branch 5589877       
+  h3
+    | Удаление файла (просто удалить отслеживаемый файл из папки недостаточно, нужно сделать его неотслеживаемым и отправить коммит)
+  .highlight.highlight-source-shell
+    pre.
+      git rm text.txt       
+      git rm -f text.txt       
+      git rm -r log/       
+      git rm ind             
+      git rm --cached readme.txt       
+  h3
+    | Перемещение/переименование файлов (Git не отслеживает перемещения/переименование, но пытается его угадать)
+  .highlight.highlight-source-shell
+    pre.
+      git mv text.txt test_new.txt       
+      git mv readme_new.md folder/       
+  h3
+    | История изменений
+  .highlight.highlight-source-shell
+    pre.
+      git log -p index.html       
+      git log -p -5 index.html       
+      git log -2       
+      git log -2 --stat       
+      git log -p -22       
+      git log --pretty=format:       -4       
+      git log --graph -10       
+      git log --since=2.weeks       
+      git log --pretty=format:       --graph --date=short       
+      git log master..branch_99       
+      git log branch_99..master       
+      git show 60d6582       
+      git show HEAD^       
+  h3
+    | Ветки
+  .highlight.highlight-source-shell
+    pre.
+      git branch       
+      git branch -v       
+      git branch new_branch       
+      git checkout new_branch       
+      git checkout -b new_branch       
+      git merge hotfix       
+      git branch -d hotfix       
+      git branch --merged       
+      git branch --no-merged       
+      git branch -a       
+      git branch -m old_branch_name new_branch_name       
+      git branch -m new_branch_name       
+      git push origin :old_branch_name new_branch_name       
+      git branch --unset-upstream       
+  h3
+    | Удалённые репозитории
+  .highlight.highlight-source-shell
+    pre.
+      git remote -v       
+      git remote remove origin       
+      git remote add origin git@github.com:nicothin/test.git       
+      git remote rm origin       
+      git remote show origin       
+      git fetch origin       
+      git fetch origin master       
+      git checkout origin/github_branch       
+      git checkout --track origin/github_branch       
+      git push origin master       
+      git pull origin       
+      git pull origin master       
+  h3
+    | Разное
+  .highlight.highlight-source-shell
+    pre.
+      git clean -f -d       
+

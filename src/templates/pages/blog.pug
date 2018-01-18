@@ -1,0 +1,40 @@
+extends ../template
+
+block variables
+    - var title = 'Блог'
+    - var drop = '#blog'
+
+block content
+    include ../common/header-blog
+                       
+    section.section.section-blog#blog
+        include ../common/preloader
+        include ../common/drop-down
+        +triangle('blog')
+        
+                
+        aside.aside-blog
+            ul.blog-nav.nav
+                li.blog-nav__item
+                    a.blog-nav__link.scroll(href="#article1", data-scroll="1")
+                        .blog-nav__text Шпаргалка по командам Git
+                li.blog-nav__item
+                    a.blog-nav__link.scroll(href="#article2", data-scroll="2")
+                        .blog-nav__text Шпаргалка примеры Git
+                li.blog-nav__item
+                    a.blog-nav__link.scroll(href="#article3", data-scroll="3")
+                        .blog-nav__text Шпаргалка GULP
+        .articles   
+            ul.articles__list
+                li.articles__item(id="article1", data-scroll="1")
+                    article.article
+                        include ../articles/article1
+                
+                li.articles__item(id="article2", data-scroll="2")
+                    article.article
+                        include ../articles/article2
+                
+                li.articles__item(id="article3", data-scroll="3")
+                    article.article
+                        include ../articles/article3               
+    include ../common/footer        

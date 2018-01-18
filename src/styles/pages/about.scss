@@ -1,0 +1,104 @@
+.about {
+  display: flex;
+  position: relative;
+  @include tablets {
+  width: 100%;
+  flex-direction: column;
+  height: auto;
+}
+
+}
+
+// =====левая колонка 
+.about__desc,
+.about__scills {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablets{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.about__desc {
+  background-color: $about-bg;
+  display: flex;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include desktop{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+}
+
+.about__desc-content {
+  @include flex-center;
+  margin-top: 40px;
+  @include desktop {
+ margin-top: rem(10px);
+}
+
+
+  width: 50%;
+  @include desktop{
+    width: 70%;
+  }
+  
+  @include tablets{
+    width: 80%;
+  }
+
+}
+// ===user-description
+.user-description {
+  width: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-description__image {
+
+  width: 100%;
+  max-width: rem(400px);  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-description__avatar {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: rem(30px);
+}
+
+
+.user-description__title {
+  margin-bottom: rem(30px);
+}
+
+.user-description__text{
+  margin-bottom: rem(30px);
+}
+.about__scills-title{
+  width: 100%;
+  height: rem(130px);
+}
+
+
+// блок scills ======
+
+
+// --------
+//section map
+
+// =====contacts===
+

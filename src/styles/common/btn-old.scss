@@ -1,0 +1,15 @@
+.btn-old {
+	background: $green-l;
+	font-size: rem(13px);
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	border-radius: rem(5px);
+	padding: rem(8px) rem(16px);
+	// @include ubuntu(medium);
+	color: #ffffff;	
+	transition: 0.3s;
+	&:hover{
+		background:  darken($green,10%);
+	}
+}

@@ -1,0 +1,96 @@
+-
+  var allSkills = [
+    {
+      title: 'Frontend',
+      skills: [
+        ['HTML5 CSS', '55'],
+        ['CSS3', '50'],
+        ['javaScript & jQuery', '45']
+      ]  
+    },
+    {
+      title: 'Backend',
+      skills: [
+        ['PHP', '35'],
+        ['mySQL', '20'],
+        ['Node.js & npm', '55'],
+        ['Mongo.db', '25']
+      ]
+    },
+    {
+      title: 'WorkFlow',
+      skills: [
+        ['Git', '55'],
+        ['Gulp', '45'],
+        ['Bower', '25']
+      ]
+    },
+  ]
+
+each skillObj in allSkills
+  h3.skills-title= skillObj.title
+  ul.skills-list
+    each skills in skillObj.skills
+      li.skills-list__item
+        svg.circles(viewbox='0 0 110 110')
+          circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+          circle(class=`circle__second circle-${skills[1]}`, r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+        span.skills-list__title= skills[0]
+
+//- h3.skills-title Frontend
+//- ul.skills-list
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-25(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title HTML5 CSS
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-45(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title CSS3
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title javaScript & jQuery
+
+//- h3.skills-title Backend
+//- ul.skills-list
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-25(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title PHP
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-45(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title mySQL
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title Node.js & npm
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title Mongo.db  
+//- h3.skills-title Workflow
+//- ul.skills-list
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-25(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title Git
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-45(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title Gulp
+//-   li.skills-list__item
+//-     svg.circles(viewbox='0 0 110 110')
+//-       circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+//-       circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+//-     span.skills-list__title Bower  

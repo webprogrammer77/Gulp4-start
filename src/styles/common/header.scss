@@ -1,0 +1,47 @@
+    .header {
+
+
+    }
+
+    .hero {
+        // @include bg-img('../img/header/header-bg.jpg');
+        @include bg-img('../img/paralax/paralax10.png');
+        width: 100%;
+        height: 100vh;
+        min-height: rem(640px); // min-width : rem(1150px);
+        position: relative;
+        @include flex-center(column);
+    }
+
+    .hero__socials {
+        position: absolute;
+        top: rem(25px);
+        left: rem(25px);
+    } 
+//   ===смотри socials.css
+
+
+    .hero__title {
+        @include flex-center(column);
+    }
+
+    .main-title {
+        @include flex-center();
+    }
+
+    .section-title__pic {
+        width: auto;
+        max-width: 75%;
+        max-height: 40%;
+        z-index: 10;
+          transform: translateZ(0);
+
+    }
+
+   
+ 
+
+    
+
+
+   
