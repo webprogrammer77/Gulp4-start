@@ -32,8 +32,10 @@
 
 .user__img {
   position: relative;
-  max-width: 200px;
+  max-width: rem(200px);
+  max-width: rem(140px);
   transform: translate(-50px, -20px);
+  transform: translate(-0px, -15px);
   z-index: 1;
 }
 
