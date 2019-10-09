@@ -429,7 +429,7 @@ gulp.task(
     clean,
     gulp.parallel(styles, templates, imagescopy, scripts, fontscopy),
     images,
-    imagesToWebp,
+    //imagesToWebp,
     gulp.parallel(watch, server, lintjs)
   )
 );
