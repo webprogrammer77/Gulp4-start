@@ -1,7 +1,9 @@
 #parallax.parallax
   each i in [9,8,7,6,5,4,3,2,1]
-    .parallax__layer
+    //- .parallax__layer
       img(src=`/img/paralax/paralax${i}.png`, alt="").parallax__image
+  .parallax__layer
+      img(src=`/img/paralax/paralax-bg.jpg`, alt="").parallax__image
 .preloader#preloader
   .preloader__spinner
     .preloader__animation
